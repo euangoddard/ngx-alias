@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  title = 'ngx-alias';
+  readonly value$ = new BehaviorSubject(0);
+
+  increment(): void {
+    this.value$.next(this.value$.getValue() + 1);
+  }
 }
