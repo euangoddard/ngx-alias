@@ -2,9 +2,11 @@
 
 Alias the result of expensive expressions in your Angular templates without using `ngIf`.
 
+[![Build Status](https://travis-ci.org/euangoddard/ngx-alias.svg?branch=master)](https://travis-ci.org/euangoddard/ngx-alias)
+
 ## Installation
 
-Install `ngx-alias` using your favouirte package manager, e.g.
+Install `ngx-alias` using your favourite package manager, e.g.
 
 ```bash
 $ npm install ngx-alias
